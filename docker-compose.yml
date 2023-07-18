@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  node:
+    build: .
+    init: true
+    restart: on-failure:3
+    environment:
+      - APP_KEY=
+      - APP_SECRET=
+      - ACCESS_TOKEN=
+      - ACCRESS_SECRET=YOUR_BOT_ID_IS_HERE
+    ports:
+      - "127.0.0.1:3324:3333"
